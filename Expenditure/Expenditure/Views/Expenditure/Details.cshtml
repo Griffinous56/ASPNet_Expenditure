@@ -1,0 +1,56 @@
+﻿@model Expenditure.Models.Expend
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<style>
+    .cities {
+        background-color: lightgreen;
+        color: white;
+        margin: 20px;
+        padding: 20px;
+    }
+</style>
+
+<h2>Details</h2>
+    @*<table>
+        <tr>
+            <th> Ngày </th>
+            <th> Thành tiền </th>
+            <th colspan="2"> Ghi chú</th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Amount)
+            </td>
+            <td colspan="2">
+                @Html.DisplayFor(model => model.Note)
+            </td>
+        </tr>
+    </table>*@
+
+<div class="cities">
+    <center>
+        <p style="color:red;font-size:50px;">Thông tin ăn chơi</p>
+    </center>
+
+    <h2 style="color:red;font-size:20px;">Ngày chi</h2>
+    <h4 style="color:red;font-size:20px;">@Html.DisplayFor(model => model.Date)</h4>
+
+    <h2 style="color:red;font-size:20px;">Số tiền</h2>
+    <h4 style="color:red;font-size:20px;">@Html.DisplayFor(model => model.Amount)</h4>
+
+    <h2 style="color:red;font-size:20px;">Ghi chú</h2>
+    <h4 style="color:red;font-size:20px;">@Html.DisplayFor(model => model.Note)</h4>
+
+    </center>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
